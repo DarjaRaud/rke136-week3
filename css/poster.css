@@ -6,6 +6,57 @@
     box-sizing: border-box;
 }
 
+.modal {
+    display: none;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(116, 106, 106, 0.419);
+    z-index: 2;
+    top: 0;
+    left: 0;
+    text-align: center;
+}
+
+
+.modal-content {
+    background-color: blanchedalmond;
+    margin: 2% auto;
+    padding: 5rem;
+    width: 700px;
+    height: 700px;
+    animation: zoom-in 1s;
+}
+
+
+@keyframes zoom-in {
+    0% {transform: scale(0);}
+    100% {transform: scale(1);}
+}
+
+
+.closeBtn {
+    float: right;
+    cursor: pointer;
+    font-size: 2rem;
+}
+
+
+.movie-poster-modal {
+    width: 300px;
+}
+
+
+
+
+
+
+.movie-poster {
+    width: 300px;
+    cursor: pointer;
+}
+
+
 html {
     font-family: 'Roboto', sans-serif;
     color: #151515;
@@ -19,14 +70,8 @@ html {
 
 .movie-title {
     text-transform: uppercase;
-    transform: translateY(-150px);
-    animation: slide-from-top 3.5s ease-in-out forwards;
 }
 
-@keyframes slide-from-top {
-    80% {transform: translateY(10px);}
-    100% {transform: translateY(0);}
-}
 
 
 .movie-poster-container img {
@@ -34,14 +79,10 @@ html {
     height: 500px;
     border-radius: 5px;
     position: relative;
-    left: -70rem;
-    animation: slide-from-left 3.5s ease-in-out forwards;
+
+    
 }
 
-@keyframes slide-from-left {
-    80% {left: 1.5rem;}
-    100% {left: 0;}
-}
 
 
 .movie-rating {
@@ -66,14 +107,8 @@ html {
     font-size: 1.2rem;
     margin-top: 1rem;
     margin-bottom: 1rem;
-    opacity: 0;
-    animation: fade-in 3.5s ease-in-out forwards;
-    animation-delay: 1s;
 }
 
-@keyframes fade-in {
-    100% {opacity: 1;}
-}
 
 
 
